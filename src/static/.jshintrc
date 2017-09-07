@@ -1,0 +1,12 @@
+{
+  "esversion": 6,
+  "laxcomma" : true,
+  "strict" :false,
+  "globalstrict": true,
+  "globals": {
+    "require": false,
+    "L" : false,
+    "module" : false,
+    "console" : false
+  }
+}

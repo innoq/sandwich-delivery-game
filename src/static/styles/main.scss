@@ -1,0 +1,253 @@
+$amount-earned-color: lightgreen;
+$amount-deducted-color: red;
+$round-duration-color: lightblue;
+$navigation-input: lightgray;
+$warning-color: rgb(229, 103, 23);
+
+$group-order-text-color: white;
+//$group-order-selected-color: lightblue;
+$group-order-selected-color: rgba(173, 216, 230, 0.5);
+$group-order-selected-border-left-color: #3090C4;
+$group-order-highlighted-color: #3090C4;
+$group-order-active-color: #3090C4;
+$group-order-border-bottom-color: gray;
+$group-order-border-left-color: #333;
+$group-order-label-color: gray;
+
+$controls-value-color: #9cf;
+$controls-border-bottom-color: gray;
+$controls-border-left-color: #333;
+
+$score-points-color: $amount-earned-color;
+
+// timer points are in same line as score points, so make $round-duration-color and $amount-earned-color the same?
+$timer-points-color: $round-duration-color;
+
+$score-and-timer-border-bottom-color: gray;
+
+$state-border-bottom-color: gray;
+$state-border-left-color: #333;
+
+$sidebar-background-color: rgba(0, 0, 0, 0.6);
+$sidebar-color: white;
+
+$game-state-background-color: rgba(0, 0, 0, 0.7);
+$game-state-color: white;
+$top-score-highlighted: #3090C4;
+
+.group-order-text {
+  background: transparent;
+  color: $group-order-text-color;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 0px;
+  box-shadow: none;
+  bottom: 0px;
+  text-align: center;
+  left: -6px;
+  top: -25px;
+}
+
+.leaflet-top {
+  top: 40%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+html, body, #main, #elm-main, #mapid {
+  height: 100%;
+}
+
+#mapid {
+  // width: calc(100% - 200px);
+  width: 100%;
+  float: left;
+  position: fixed;
+}
+
+#map-overlay {
+  // width: calc(100% - 200px);
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#map-overlay #game-state {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  background-color: $game-state-background-color;
+  color: $game-state-color;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#map-overlay #notifications {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#map-overlay #sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  right: 0px;
+  float: right;
+  background-color: $sidebar-background-color;
+  color: $sidebar-color;
+}
+
+#state {
+  padding: 20px 20px 20px 10px;
+  overflow: auto;
+  border-bottom: 1px solid $state-border-bottom-color;
+  border-left: 5px solid $state-border-left-color;
+}
+
+#score-and-timer {
+  padding: 35px 20px 20px 10px;
+  overflow: auto;
+  border-bottom: 2px solid $score-and-timer-border-bottom-color;
+}
+
+#score {
+  float: left;
+  width: 80px;
+}
+
+#score-label {
+  text-align: left;
+}
+
+#score-points {
+  color: $score-points-color;
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20px;
+}
+
+#timer {
+  float: left;
+  width: 80px;
+}
+
+#timer-label {
+  text-align: left;
+}
+
+#timer-points {
+  color: $timer-points-color;
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: left;
+}
+
+#controls {
+  padding: 10px 10px 10px 10px;
+  font-size: 11pt;
+  overflow: auto;
+  border-bottom: 1px solid $controls-border-bottom-color;
+  border-left: 5px solid $controls-border-bottom-color;
+}
+
+#control-label {
+  padding: 20px 10px 20px 20px;
+  float: left;
+}
+
+#control-value {
+  color: $controls-value-color;
+  text-align: right;
+}
+
+#group-orders-label {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid $group-order-label-color;
+}
+
+#group-orders ol {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#group-orders li {
+  padding: 10px;
+  overflow: auto;
+  border-bottom: 1px solid $group-order-border-bottom-color;
+  border-left: 5px solid $group-order-border-left-color;
+}
+
+#group-orders li.active {
+  background-color: $group-order-active-color;
+  border-left: 5px solid $group-order-active-color;
+}
+
+#group-orders li.highlighted {
+  border-left: 5px solid $group-order-highlighted-color;
+}
+
+#group-orders li.selected {
+  background-color: $group-order-selected-color;
+  border-left: 5px solid $group-order-selected-border-left-color;
+}
+
+#group-orders a {
+  color: white;
+  text-decoration: none;
+}
+
+.amount-earned {
+  color: $amount-earned-color;
+}
+
+.amount-deducted {
+  color: $amount-deducted-color;
+}
+
+.round-duration {
+  color: $round-duration-color;
+}
+
+.navigation-input {
+  color: $navigation-input;
+}
+
+.warning {
+  color: $warning-color;
+}
+
+#game-intro-text {
+  text-align: justify;
+  margin: 3%;
+}
+
+#top-scores {
+  text-align: center;
+  list-style-position:inside;
+}
+
+#top-scores table {
+  margin: 10px auto;
+}
+
+#top-scores td, th {
+  padding-left: 20px;
+}
+
+#top-scores .highlighted {
+  color: $top-score-highlighted;
+  font-weight: bold;
+}
