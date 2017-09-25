@@ -39,7 +39,7 @@ In order to catch the attention of visitors, the screen of the mobile phone was 
 
 The original controls via the bike were removed from the source code.
 
-An article related to this repository can be read [here TODO]().
+An article related to this repository can be read [here](https://sandwich-delivery-game-webapp.s3.eu-central-1.amazonaws.com/index.html).
 
 
 ### Technical
