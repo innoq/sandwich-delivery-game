@@ -18060,7 +18060,7 @@
 				A2(_elm_lang$core$Json_Decode$field, 'score', _elm_lang$core$Json_Decode$int)));
 		var url = A2(
 			_elm_lang$core$Basics_ops['++'],
-			'http://',
+			'https://',
 			A2(_elm_lang$core$Basics_ops['++'], config.scoreServerUrl, '/score'));
 		return A2(
 			_elm_lang$http$Http$send,
@@ -18127,7 +18127,7 @@
 			var responseDecoder = A2(_elm_lang$core$Json_Decode$field, 'playerId', _elm_lang$core$Json_Decode$int);
 			var url = A2(
 				_elm_lang$core$Basics_ops['++'],
-				'http://',
+				'https://',
 				A2(_elm_lang$core$Basics_ops['++'], config.scoreServerUrl, '/score'));
 			var request = A3(_elm_lang$http$Http$post, url, body, responseDecoder);
 			return A2(_elm_lang$http$Http$send, _innoq$sandwich_game$Main$SendPlayerScoreResult, request);
