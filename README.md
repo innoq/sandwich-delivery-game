@@ -1,6 +1,8 @@
 
-
 ## Sandwich Delivery Game
+
+An article describing the development process as well as some learnings can be read on [innoq.com](https://www.innoq.com/en/blog/sandwich-delivery-game/). This README should just provide a short description.
+
 
 ### The Game
 
@@ -32,21 +34,16 @@ Mobile phones the controls are:
 
 The game was developed for a show case on the "Smart Suisse" exhibition in Basel, Switzerland. It should demonstrate the integration of modern bike technology with a web application.
 
-The bike was set up with a speed sensor and a mobile phone on top of the handlebars. The mobile phone detected the rotation of the handlebar and, together with the speed sensor, the player was able to move.
-An additional controller was part of the bike extension to make navigation during riding easier. The controlls were integrated in the gameplay.
-
-In order to catch the attention of visitors, the screen of the mobile phone was mirrored via a beamer.
-
 The original controls via the bike were removed from the source code.
 
-An article related to this repository can be read [here](https://sandwich-delivery-game-webapp.s3.eu-central-1.amazonaws.com/index.html).
+The game can be played [here](https://sandwich-delivery-game-webapp.s3.eu-central-1.amazonaws.com/index.html).
 
 
 ### Technical
 
 The main view of the game is a map shown with [Leaflet](http://leafletjs.com/). Nearly all elements on the map are drawn by [Elm](http://elm-lang.org/) as well as the main logic is kept in Elm.
 
-Technically is Elm telling Leaflet over ports which map element has been updated and must be redrawn. Only the sidebar and notifications are really drawn by Elm with overlays.
+Technically is Elm telling Leaflet over ports which map element has been updated and must be re-drawn. Only the sidebar and notifications are really drawn by Elm with overlays.
 
 
 ### Build and Serve
