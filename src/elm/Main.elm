@@ -741,7 +741,7 @@ loadGroupOrderLocations url =
 sendPlayerScore : Config -> Int -> Cmd Msg
 sendPlayerScore config score =
   let
-    url = "http://" ++ config.scoreServerUrl ++ "/score"
+    url = "https://" ++ config.scoreServerUrl ++ "/score"
     responseDecoder = Json.Decode.field "playerId" Json.Decode.int
     body = Json.Encode.object [ ("score", Json.Encode.int score) ] |> Http.jsonBody
     request = Http.post url body responseDecoder
@@ -751,7 +751,7 @@ sendPlayerScore config score =
 getScores : Config -> Cmd Msg
 getScores config =
   let
-    url = "http://" ++ config.scoreServerUrl ++ "/score"
+    url = "https://" ++ config.scoreServerUrl ++ "/score"
     responseDecoder =
         Json.Decode.list (
           Json.Decode.map3 ScoreEntry
